@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "oshop-f3445",
+    "staging": "shopping-fe875"
+  }
+}
