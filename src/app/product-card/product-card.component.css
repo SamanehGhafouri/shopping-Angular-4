@@ -6,6 +6,10 @@
   margin-bottom: 30px;
 }
 
+.card-footer button{
+  cursor: pointer;
+}
+
 /*.card-img-top {*/
 /*  height: 20px;*/
 /*  width: 120px;*/
