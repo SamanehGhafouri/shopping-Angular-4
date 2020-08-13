@@ -1,13 +1,17 @@
-<div  *ngIf="product.title" class="card">
-  <img [src]="product.imageUrl" class="card-img-top" alt="{{product.title}}" *ngIf="product.imageUrl">
+<div  *ngIf="product.title" class="card" style="width: 18rem;">
+  <div class="embed-responsive embed-responsive-16by9">
+    <img [src]="product.imageUrl" class="card-img-top embed-responsive-item" alt="{{product.title}}, card image cap" *ngIf="product.imageUrl">
+  </div>
+
   <div class="card-body">
-    <h4 class="card-title">{{product.title}}</h4>
+    <h5 class="card-title">{{product.title}}</h5>
     <p class="card-text">{{product.price | currency:'USD':true }}</p>
 
   </div>
-  <div class="card-footer">
-    <button *ngIf="showActions"
-            (click)="addToCart(product)"
-            class="btn btn-primary btn-block">Add to Card</button>
+  <div *ngIf="showActions" class="card-footer">
+    <button
+        (click)="addToCart(product)"
+        class="btn btn-primary btn-block">Add to Cart</button>
+    <div>{{ getQuantity() }}</div>
   </div>
 </div>
