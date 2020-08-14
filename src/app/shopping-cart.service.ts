@@ -3,6 +3,7 @@ import {AngularFireDatabase, FirebaseObjectObservable} from "angularfire2/databa
 import {Product} from "./models/product";
 import {ShoppingCart} from "./models/shopping-cart";
 import {Observable} from "rxjs";
+import "rxjs/add/operator/map";
 
 @Injectable()
 export class ShoppingCartService {

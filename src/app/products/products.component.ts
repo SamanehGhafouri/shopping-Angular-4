@@ -14,13 +14,13 @@ import {Subscription} from "rxjs";
 export class ProductsComponent implements OnInit, OnDestroy{
   products: Product[] = [];
   category: string;
-  filteredProducts: Product [];
+  filteredProducts: Product [] = [];
   cart: any;
   subscription: Subscription;
 
   constructor(
     rout: ActivatedRoute,
-    productService:ProductService,
+    productService: ProductService,
     private shoppingCartService: ShoppingCartService) {
 
 
@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit, OnDestroy{
   }
 
   async ngOnInit() {
-    (await this.shoppingCartService.getCart())
+    this.subscription = (await this.shoppingCartService.getCart())
       .subscribe(cart => this.cart = cart);
   }
 
