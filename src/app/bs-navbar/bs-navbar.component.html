@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-  <a class="navbar-brand" routerLink="/">ORGANIC</a>
+  <a class="navbar-brand" routerLink="/">
+    <i class="fa fa-pagelines" aria-hidden="true"> ORGANIC</i>
+    </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,6 +10,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLink="/shopping-cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           Shopping Cart
           <span class="badge  badge-pill badge-success" *ngIf="cart$ | async as cart">
             {{ cart.totalItemsCount }}
