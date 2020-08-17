@@ -4,3 +4,16 @@
   border-radius: 100%;
   background-size: cover;
 }
+.btn{
+  background-color: darkgreen;
+  border-color: darkgreen;
+}
+
+
+.btn-sm, .btn-light {
+  color: #111;
+  background-color: lightgoldenrodyellow;
+  border-color: lightgoldenrodyellow;
+  cursor: pointer;
+
+}
