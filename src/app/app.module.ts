@@ -4,7 +4,7 @@ import { AdminAuthGuard } from './admin-auth-guard.service';
 import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
-import { environment } from './../environments/environment';
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
-import { DataTableModule } from 'angular-4-data-table';
+import { DataTableModule } from 'angular-4-data-table/src/index';
 
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
@@ -35,6 +35,7 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
 import {OrderService} from "./order.service";
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+
 
 @NgModule({
   declarations: [
@@ -66,14 +67,14 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      { path: '', component: ProductsComponent },
-      { path: 'products', component: ProductsComponent },
-      { path: 'shopping-cart', component: ShoppingCartComponent },
-      { path: 'login', component: LoginComponent },
+      {path: '', component: ProductsComponent},
+      {path: 'products', component: ProductsComponent},
+      {path: 'shopping-cart', component: ShoppingCartComponent},
+      {path: 'login', component: LoginComponent},
 
-      { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
-      { path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuard] },
-      { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
+      {path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard]},
+      {path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuard]},
+      {path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard]},
 
       {
         path: 'admin/products/new',
@@ -95,7 +96,8 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
         component: AdminOrdersComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       }
-    ])
+    ]),
+    DataTableModule
   ],
   providers: [
     AuthService,

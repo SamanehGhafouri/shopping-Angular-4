@@ -5,15 +5,6 @@
 
 export const environment = {
   production: false,
-  // firebase: {
-  //   apiKey: "AIzaSyAwxo8Bt7ZeYfFLI5WrakbNGtJsskBv3wA",
-  //   authDomain: "oshop-f3445.firebaseapp.com",
-  //   databaseURL: "https://oshop-f3445.firebaseio.com",
-  //   projectId: "oshop-f3445",
-  //   storageBucket: "oshop-f3445.appspot.com",
-  //   messagingSenderId: "223112932947"
-  // }
-
   firebase: {
     apiKey: "AIzaSyDh6tz7mhf49FfRzPES5pI2gkUfIKkHOfQ",
     authDomain: "shopping-fe875.firebaseapp.com",
